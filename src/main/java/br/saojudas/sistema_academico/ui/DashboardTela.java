@@ -46,7 +46,8 @@ public class DashboardTela extends javax.swing.JFrame {
 		});
 
 		gerenciarAlunosButton.setText("Gerennciar alunos");
-
+		gerenciarAlunosButton.addActionListener(evt -> gerenciarAlunosButtonActionPerformed(evt));
+		
 		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
 		jPanel1.setLayout(jPanel1Layout);
 		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,6 +129,12 @@ public class DashboardTela extends javax.swing.JFrame {
 	private javax.swing.JButton gerenciarCursosButton;
 	private javax.swing.JPanel jPanel1;
 	// End of variables declaration//GEN-END:variables
+
+	private void gerenciarAlunosButtonActionPerformed(java.awt.event.ActionEvent evt) {
+		AlunosTela alunosTela = new AlunosTela();
+		alunosTela.setVisible(true);
+		this.dispose();
+	}
 
 	private void gerenciarCursosButtonActionPerformed(java.awt.event.ActionEvent evt) {
 		CursosTela cursosTela = new CursosTela();
